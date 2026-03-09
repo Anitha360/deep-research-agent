@@ -8,7 +8,9 @@ from agents.research_agent import create_researcher
 from agents.analyst_agent import create_analyst
 from agents.critic_agent import create_critic
 from agents.writer_agent import create_writer
+from config.logger import get_logger
 
+logger = get_logger("main.py")
 
 async def main():
 

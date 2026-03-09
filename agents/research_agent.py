@@ -3,10 +3,12 @@ from config.model_client import get_model_client
 
 from tools.search_tool import search_web
 from tools.web_scraper import scrape_page
+from config.logger import get_logger
 
+logger = get_logger("Researcher")
 
 def create_researcher():
-
+    logger.info("Initializing Research")
     researcher = AssistantAgent(
         name="researcher",
         model_client=get_model_client(),
@@ -21,5 +23,5 @@ Steps:
 4. Summarize findings
 """
     )
-
+    logger.info("research work completed")
     return researcher
